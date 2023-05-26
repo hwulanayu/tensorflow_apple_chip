@@ -17,6 +17,9 @@ Make sure install the Homebrew on your mac. Open your terminal (f4 + "Terminal")
 ```
 {: #code-example-1}
 
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
+
 Homebrew simplifies the installation of software on Apple's operating system, macOS, as well as Linux. 
 
 > Official Documentation: [homebrew](https://brew.sh/)
@@ -55,7 +58,7 @@ Further reference to [uninstall Anaconda on macOS](https://docs.anaconda.com/fre
 
 [Install miniforge](https://docs.conda.io/en/latest/miniconda.html). Download the **Miniconda3 macOS Apple M1 64-bit pkg**.
 
-Close your Terminal and open the new one. Make sure your miniconda installed correctly. By default, miniconda gives you `base` environment.
+Close your Terminal and open the new one. Make sure your miniconda installed correctly. By default, miniconda gives you *base* environment.
 
 <p align="center" width="100%">
     <img width="100%" src="assets/miniconda_terminal.png">
@@ -63,7 +66,7 @@ Close your Terminal and open the new one. Make sure your miniconda installed cor
 
 ## 4. Create Virtual Environment
 
-Create a virtual environment named `tensorflow_m2` or anything, really, with python3.8 or 3.9 or 3.10 installed.
+Create a virtual environment named **tensorflow_m2** or anything, really, with python3.8 or 3.9 or 3.10 installed.
 
 ```
 conda create --name <YOUR_VIRTUAL_ENV_NAME> python=<PYTHON_VERSION>
@@ -79,7 +82,7 @@ conda create --name tensorflow_m2 python=3.8
     <img width="100%" src="assets/virtual_env_terminal.png">
 </p>
 
-type `y` and enter.
+type **y** and enter.
 
 Activate your virtual environment with this command:
 
@@ -172,7 +175,7 @@ If jupyter notebook note installed yet, install it with this command:
 pip install notebook
 ```
 
-Now that you already have jupyter notebook on base environment, activate the virtual environment that has the `tensorflow` library installed. 
+Now that you already have jupyter notebook on base environment, activate the virtual environment that has the **tensorflow** library installed. 
 
 ```
 conda activate tensorflow_m2
@@ -201,7 +204,7 @@ python -m ipykernel install --user --name=tensorflow_m2
     <img width="100%" src="assets/ipykernel_terminal.png">
 </p>
 
-Back to your `base` environment and type `jupyter notebook` on your terminal. It will open a localhost browser tab.
+Back to your *base* environment and type **jupyter notebook** on your terminal. It will open a localhost browser tab.
 
 <p align="center" width="100%">
     <img width="100%" src="assets/localhost_jupyter.png">
@@ -209,13 +212,14 @@ Back to your `base` environment and type `jupyter notebook` on your terminal. It
 
 Create New Notebook with the new kernel.
 
-On upper right jupyter notebook localhost, click `New` button, select the kernel that has tensorflow installed on its environment. On your new notebook, import TensorFlow and paste this code:
+On upper right jupyter notebook localhost, click **New** button, select the kernel that has tensorflow installed on its environment. On your new notebook, import TensorFlow and paste this code:
 
 
 ```python
 import tensorflow as tf
 print("Num GPUs Available: ", len(tf.config.experimental.list_physical_devices('GPU')))
 ```
+Expected output:
 
     Num GPUs Available:  1
 
@@ -311,17 +315,17 @@ Copy the output path and save it somewhere. We're going to use it in RStudio.
 
 ## RStudio Settings
 
-### `keras` and `tensorflow` Library Installation
+### **keras** and **tensorflow** Library Installation
 
-Open RStudio, install `keras` dan `tensorflow` libraries. On lower left Panel, click `Packages` tab > Install > type the library name.
+Open RStudio, install **keras** dan **tensorflow** libraries. On lower left Panel, click **Packages** tab > Install > type the library name.
 
 <p align="center" width="100%">
     <img width="100%" src="assets/rstudio_install.png">
 </p>
 
-### Set `reticulate` environment
+### Set **reticulate** environment
 
-Open R-Studio and restart R-Session: Click menu `Session` $\rightarrow$ `Restart R`. On Console panel, run this scripts **one-by-one**:
+Open R-Studio and restart R-Session: Click menu **Session** > **Restart R**. On Console panel, run this scripts **one-by-one**:
 
 ```r
 > Sys.setenv(RETICULATE_PYTHON = "<PYTHON_ENV_PATH FROM_WHICH_PYTHON_COMMAND>")
@@ -349,7 +353,7 @@ example:
 
 ### Set Global Options
 
-If there are no errors from all the line codes above, please go to menu `Tools` > `Global Options` > `Python`. In the Python Interpreter Section, remove the default path, and replace it with the Python path output from `tf_config()` above. For example, if the output looks like this:
+If there are no errors from all the line codes above, please go to menu **Tools** > **Global Options** > **Python**. In the Python Interpreter Section, remove the default path, and replace it with the Python path output from `tf_config()` above. For example, if the output looks like this:
 
 ```r
 > tf_config() 
@@ -357,7 +361,7 @@ TensorFlow v2.9.0 (/opt/miniconda3/envs/tensorflow_m2/lib/python3.8/site-package
 Python v3.8 (/opt/miniconda3/envs/tensorflow_m2/bin/python3.8)
 ```
 
-it means that what you entered in `Global Options` is "/opt/miniconda3/envs/tensorflow_m1/bin/python3.8". (minus the quotation marks).
+it means that what you entered in **Global Options** is "/opt/miniconda3/envs/tensorflow_m1/bin/python3.8". (minus the quotation marks).
 
 <p align="center" width="100%">
     <img width="100%" src="assets/rstudio_global_option.png">
@@ -372,7 +376,7 @@ If so, try to close Rstudio and open some R project that uses TensorFlow. Run Al
 > model <- keras_model_sequential()
 ```
 
-The `model` variable should be appear on your global environment and if there is no error, then it is ready to use.
+The *model* variable should be appear on your global environment and if there is no error, then it is ready to use.
 
 # References<a name="ref"></a>
 
