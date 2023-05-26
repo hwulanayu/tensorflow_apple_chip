@@ -56,7 +56,7 @@ Install miniforge $\rightarrow$ https://docs.conda.io/en/latest/miniconda.html. 
 Close your Terminal and open the new one. Make sure your miniconda installed correctly. By default, miniconda gives you `base` environment.
 
 <p align="center" width="100%">
-    <img width="65%" src="assets/miniconda_terminal.png">
+    <img width="100%" src="assets/miniconda_terminal.png">
 </p>
 
 ## 4. Create Virtual Environment
@@ -74,7 +74,7 @@ conda create --name tensorflow_m2 python=3.8
 ```
 
 <p align="center" width="100%">
-    <img width="65%" src="assets/virtual_env_terminal.png">
+    <img width="100%" src="assets/virtual_env_terminal.png">
 </p>
 
 type `y` and enter.
@@ -91,7 +91,7 @@ conda activate tensorflow_m2
 ```
 
 <p align="center" width="100%">
-    <img width="65%" src="assets/activate_env_terminal.png">
+    <img width="100%" src="assets/activate_env_terminal.png">
 </p>
 
 ## 5. Installing Tensorflow-MacOS libraries<a name="five"></a>
