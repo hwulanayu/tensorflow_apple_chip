@@ -51,7 +51,7 @@ sudo rm -rf ~/opt/anaconda3
 ```
 Further reference to [uninstall Anaconda on macOS](https://docs.anaconda.com/free/anaconda/install/uninstall/#macos-or-linux)
 
-Install miniforge $\rightarrow$ https://docs.conda.io/en/latest/miniconda.html. Download the **Miniconda3 macOS Apple M1 64-bit pkg**.
+[Install miniforge](https://docs.conda.io/en/latest/miniconda.html). Download the **Miniconda3 macOS Apple M1 64-bit pkg**.
 
 Close your Terminal and open the new one. Make sure your miniconda installed correctly. By default, miniconda gives you `base` environment.
 
