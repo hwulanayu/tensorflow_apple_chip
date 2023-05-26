@@ -395,9 +395,6 @@ The `model` variable should be appear on your global environment and if there is
 {% if page.content contains "code" %}
 <script>
 <!-- clipboard.js code -->
-</script>
-{% endif %}
-
 // get all <code> elements
 var allCodeBlocksElements = $( "code" );
 
@@ -414,7 +411,8 @@ allCodeBlocksElements.each(function(i) {
   });
  
   new Clipboard('.btn');
-    
+</script>
+
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
-
+{% endif %}
