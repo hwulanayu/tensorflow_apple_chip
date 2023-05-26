@@ -5,7 +5,8 @@
 Author: [hwulanayu](https://github.com/hwulanayu)
 
 
-[TOC]
+* auto-gen TOC:
+{:toc}
 
 
 # For Python Miniconda/Miniforge Environment
