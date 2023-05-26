@@ -12,6 +12,7 @@
 
 Make sure install the Homebrew on your mac. Open your terminal (f4 + "Terminal") and paste this command:
 
+{% include codeHeader.html %}
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
