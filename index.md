@@ -321,7 +321,7 @@ Open RStudio, install `keras` dan `tensorflow` libraries. On lower left Panel, c
 
 Open R-Studio and restart R-Session: Click menu `Session` $\rightarrow$ `Restart R`. On Console panel, run this scripts **one-by-one**:
 
-```R
+```r
 > Sys.setenv(RETICULATE_PYTHON = "<PYTHON_ENV_PATH FROM_WHICH_PYTHON_COMMAND>")
 > reticulate::use_python("<PYTHON_ENV_PATH FROM_WHICH_PYTHON_COMMAND>")
 > reticulate::use_condaenv("<YOUR_ENV_NAME>", required = TRUE)
@@ -334,7 +334,7 @@ Open R-Studio and restart R-Session: Click menu `Session` $\rightarrow$ `Restart
 
 example:
 
-```R
+```r
 > Sys.setenv(RETICULATE_PYTHON = "/opt/miniconda3/envs/tensorflow_m2/bin/python")
 > reticulate::use_python("/opt/miniconda3/envs/tensorflow_m2/bin/python")
 > reticulate::use_condaenv("tensorflow_m2", required = TRUE)
@@ -349,7 +349,7 @@ example:
 
 If there are no errors from all the line codes above, please go to menu `Tools` > `Global Options` > `Python`. In the Python Interpreter Section, remove the default path, and replace it with the Python path output from `tf_config()` above. For example, if the output looks like this:
 
-```R
+```r
 > tf_config() 
 TensorFlow v2.9.0 (/opt/miniconda3/envs/tensorflow_m2/lib/python3.8/site-packages/tensorflow)
 Python v3.8 (/opt/miniconda3/envs/tensorflow_m2/bin/python3.8)
@@ -365,7 +365,7 @@ it means that what you entered in `Global Options` is "/opt/miniconda3/envs/tens
 ## Verify Installation
 If so, try to close Rstudio and open some R project that uses TensorFlow. Run All and make sure all the code can work. Or you can verify your installation with this code:
 
-```R
+```r
 > library(keras)
 > model <- keras_model_sequential()
 ```
