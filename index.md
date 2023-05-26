@@ -7,7 +7,8 @@ Author: [hwulanayu](https://github.com/hwulanayu)
 
 Contents:
 
-* TOC {:toc}
+* TOC
+{:toc}
 
 
 # For Python Miniconda/Miniforge Environment
