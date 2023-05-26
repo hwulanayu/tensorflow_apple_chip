@@ -17,6 +17,15 @@ Make sure install the Homebrew on your mac. Open your terminal (f4 + "Terminal")
 ```
 {: #code-example-1}
 
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
+
+<code>print("Club Nacional de Football")</code>
+<br>
+<code>print("is a sports institution")</code>
+<br>
+<code>print("from Uruguay")</code>
+
 Homebrew simplifies the installation of software on Apple's operating system, macOS, as well as Linux. 
 
 > Official Documentation: [homebrew](https://brew.sh/)
