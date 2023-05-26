@@ -12,10 +12,11 @@
 
 Make sure install the Homebrew on your mac. Open your terminal (f4 + "Terminal") and paste this command:
 
-{% include codeHeader.html %}
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
+{: #code-example-1}
+
 Homebrew simplifies the installation of software on Apple's operating system, macOS, as well as Linux. 
 
 > Official Documentation: [homebrew](https://brew.sh/)
@@ -389,3 +390,31 @@ The `model` variable should be appear on your global environment and if there is
 - [Stackoverflow: How to install keras using R Studio on a Mac OS computer?](https://stackoverflow.com/questions/71355902/how-to-install-keras-using-r-studio-on-a-mac-os-computer)
 - [Github Discussion: Error install tensorflow di R dengan chipset m1/m2](https://github.com/teamalgoritma/community/discussions/622)
 - [Stackoverflow: R (RStudio) can't find valid tensorflow installation (Mac M1)](https://stackoverflow.com/questions/74953200/r-rstudio-cant-find-valid-tensorflow-installation-mac-m1)
+
+
+{% if page.content contains "code" %}
+<script>
+<!-- clipboard.js code -->
+</script>
+{% endif %}
+
+// get all <code> elements
+var allCodeBlocksElements = $( "code" );
+
+allCodeBlocksElements.each(function(i) {
+ 	// add different id for each code block
+
+	// target	
+  var currentId = "codeblock" + (i + 1);
+  $(this).attr('id', currentId);
+     
+  //trigger
+  var clipButton = '<button class="btn" data-clipboard-target="#' + currentId + '"><img src="https://clipboardjs.com/assets/images/clippy.svg" width="13" alt="Copy to clipboard"></button>';
+     $(this).after(clipButton);
+  });
+ 
+  new Clipboard('.btn');
+    
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
+
