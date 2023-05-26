@@ -122,7 +122,7 @@ conda list|grep -E '(tensorflow|numpy)'
 ```
 
 <p align="center" width="100%">
-    <img width="65%" src="assets/check_version_terminal.png">
+    <img width="100%" src="assets/check_version_terminal.png">
 </p>
 
 Make sure there's numpy library on your environment.
@@ -136,7 +136,7 @@ conda deactivate
 ```
 
 <p align="center" width="100%">
-    <img width="65%" src="assets/deactivate_terminal.png">
+    <img width="100%" src="assets/deactivate_terminal.png">
 </p>
 
 Check if jupyter notebook already installed on your base env.
@@ -196,13 +196,13 @@ python -m ipykernel install --user --name=tensorflow_m2
 ```
 
 <p align="center" width="100%">
-    <img width="65%" src="assets/ipykernel_terminal.png">
+    <img width="100%" src="assets/ipykernel_terminal.png">
 </p>
 
 Back to your `base` environment and type `jupyter notebook` on your terminal. It will open a localhost browser tab.
 
 <p align="center" width="100%">
-    <img width="65%" src="assets/localhost_jupyter.png">
+    <img width="100%" src="assets/localhost_jupyter.png">
 </p>
 
 Create New Notebook with the new kernel.
@@ -238,6 +238,7 @@ loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)
 model.compile(optimizer="adam", loss=loss_fn, metrics=["accuracy"])
 model.fit(x_train, y_train, epochs=5, batch_size=64)
 ```
+Expected output:
 
     Metal device set to: Apple M1
 
@@ -300,7 +301,7 @@ which python
 ```
 
 <p align="center" width="100%">
-    <img width="65%" src="assets/which_python_terminal.png">
+    <img width="100%" src="assets/which_python_terminal.png">
 </p>
 
 
@@ -313,7 +314,7 @@ Copy the output path and save it somewhere. We're going to use it in RStudio.
 Open RStudio, install `keras` dan `tensorflow` libraries. On lower left Panel, click `Packages` tab > Install > type the library name.
 
 <p align="center" width="100%">
-    <img width="80%" src="assets/rstudio_install.png">
+    <img width="100%" src="assets/rstudio_install.png">
 </p>
 
 ### Set `reticulate` environment
@@ -357,7 +358,7 @@ Python v3.8 (/opt/miniconda3/envs/tensorflow_m2/bin/python3.8)
 it means that what you entered in `Global Options` is "/opt/miniconda3/envs/tensorflow_m1/bin/python3.8". (minus the quotation marks).
 
 <p align="center" width="100%">
-    <img width="80%" src="assets/rstudio_global_option.png">
+    <img width="100%" src="assets/rstudio_global_option.png">
 </p>
 
 
