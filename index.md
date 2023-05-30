@@ -60,7 +60,7 @@ Further reference to [uninstall Anaconda on macOS](https://docs.anaconda.com/fre
 
 Close your Terminal and open the new one. Make sure your miniconda installed correctly. By default, miniconda gives you *base* environment.
 
-<p align="center" width="100%">
+<p align="center" width="65%">
     <img width="65%" src="assets/miniconda_terminal.png">
 </p>
 
