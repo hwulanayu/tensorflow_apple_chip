@@ -78,7 +78,7 @@ Example:
 conda create --name tensorflow_m2 python=3.8
 ```
 
-<p align="center" width="100%">
+<p align="center" width="65%">
     <img width="65%" src="assets/virtual_env_terminal.png">
 </p>
 
@@ -95,7 +95,7 @@ example:
 conda activate tensorflow_m2
 ```
 
-<p align="center" width="100%">
+<p align="center" width="65%">
     <img width="65%" src="assets/activate_env_terminal.png">
 </p>
 
@@ -126,7 +126,7 @@ python --version
 conda list|grep -E '(tensorflow|numpy)'
 ```
 
-<p align="center" width="100%">
+<p align="center" width="65%">
     <img width="65%" src="assets/check_version_terminal.png">
 </p>
 
@@ -140,7 +140,7 @@ Back to your conda base environment with this command:
 conda deactivate
 ```
 
-<p align="center" width="100%">
+<p align="center" width="65%">
     <img width="65%" src="assets/deactivate_terminal.png">
 </p>
 
@@ -200,7 +200,7 @@ example:
 python -m ipykernel install --user --name=tensorflow_m2
 ```
 
-<p align="center" width="100%">
+<p align="center" width="65%">
     <img width="65%" src="assets/ipykernel_terminal.png">
 </p>
 
@@ -306,7 +306,7 @@ Check your Python virtual environment path with this command:
 which python
 ```
 
-<p align="center" width="100%">
+<p align="center" width="65%">
     <img width="65%" src="assets/which_python_terminal.png">
 </p>
 
