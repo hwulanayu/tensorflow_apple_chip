@@ -61,7 +61,7 @@ Further reference to [uninstall Anaconda on macOS](https://docs.anaconda.com/fre
 Close your Terminal and open the new one. Make sure your miniconda installed correctly. By default, miniconda gives you *base* environment.
 
 <p align="center" width="100%">
-    <img width="100%" src="assets/miniconda_terminal.png">
+    <img width="65%" src="assets/miniconda_terminal.png">
 </p>
 
 ## 4. Create Virtual Environment
@@ -79,7 +79,7 @@ conda create --name tensorflow_m2 python=3.8
 ```
 
 <p align="center" width="100%">
-    <img width="100%" src="assets/virtual_env_terminal.png">
+    <img width="65%" src="assets/virtual_env_terminal.png">
 </p>
 
 type **y** and enter.
@@ -96,7 +96,7 @@ conda activate tensorflow_m2
 ```
 
 <p align="center" width="100%">
-    <img width="100%" src="assets/activate_env_terminal.png">
+    <img width="65%" src="assets/activate_env_terminal.png">
 </p>
 
 ## 5. Installing Tensorflow-MacOS libraries<a name="five"></a>
@@ -127,7 +127,7 @@ conda list|grep -E '(tensorflow|numpy)'
 ```
 
 <p align="center" width="100%">
-    <img width="100%" src="assets/check_version_terminal.png">
+    <img width="65%" src="assets/check_version_terminal.png">
 </p>
 
 Make sure there's numpy library on your environment.
@@ -141,7 +141,7 @@ conda deactivate
 ```
 
 <p align="center" width="100%">
-    <img width="100%" src="assets/deactivate_terminal.png">
+    <img width="65%" src="assets/deactivate_terminal.png">
 </p>
 
 Check if jupyter notebook already installed on your base env.
@@ -201,7 +201,7 @@ python -m ipykernel install --user --name=tensorflow_m2
 ```
 
 <p align="center" width="100%">
-    <img width="100%" src="assets/ipykernel_terminal.png">
+    <img width="65%" src="assets/ipykernel_terminal.png">
 </p>
 
 Back to your *base* environment and type **jupyter notebook** on your terminal. It will open a localhost browser tab.
@@ -307,7 +307,7 @@ which python
 ```
 
 <p align="center" width="100%">
-    <img width="100%" src="assets/which_python_terminal.png">
+    <img width="65%" src="assets/which_python_terminal.png">
 </p>
 
 
