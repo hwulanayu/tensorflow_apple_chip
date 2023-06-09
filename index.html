@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Tensorflow Apple Chip Installation | for M1 and M2 chip with Python and R programming language</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="Tensorflow Apple Chip Installation" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="for M1 and M2 chip with Python and R programming language" />
+<meta property="og:description" content="for M1 and M2 chip with Python and R programming language" />
+<link rel="canonical" href="https://hwulanayu.github.io/tensorflow_apple_chip/" />
+<meta property="og:url" content="https://hwulanayu.github.io/tensorflow_apple_chip/" />
+<meta property="og:site_name" content="Tensorflow Apple Chip Installation" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Tensorflow Apple Chip Installation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"for M1 and M2 chip with Python and R programming language","headline":"Tensorflow Apple Chip Installation","name":"Tensorflow Apple Chip Installation","url":"https://hwulanayu.github.io/tensorflow_apple_chip/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/tensorflow_apple_chip/assets/css/style.css?v=0af60f915c4c951a0b11df892ec2906f765ccc19">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/tensorflow_apple_chip/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="sidebar">
+        <h1><a href="https://hwulanayu.github.io/tensorflow_apple_chip/">Tensorflow Apple Chip Installation</a></h1>
+
+        
+
+        <p>for M1 and M2 chip with Python and R programming language</p>
+
+        
+<!--         <p class="view"><a href="https://github.com/hwulanayu/tensorflow_apple_chip">View the Project on GitHub <small>hwulanayu/tensorflow_apple_chip</small></a></p> -->
+        
+
+        
+
+        
+        
+        <p><b>Contents:</b></p> 
+        <ul><li><a href="#for-python-minicondaminiforge-environment">For Python Miniconda/Miniforge Environment</a><ul><li><a href="#1-homebrew-installation">1. <a href="https://brew.sh/">Homebrew</a> Installation</a></li><li><a href="#2-xcode-installation">2. Xcode Installation</a></li><li><a href="#3-miniforgeminiconda-installation">3. Miniforge/Miniconda Installation<a name="three"></a></a></li><li><a href="#4-create-virtual-environment">4. Create Virtual Environment</a></li><li><a href="#5-installing-tensorflow-macos-libraries">5. Installing Tensorflow-MacOS libraries<a name="five"></a></a></li><li><a href="#6-jupyter-notebook-installation">6. Jupyter Notebook Installation</a></li><li><a href="#7-verify-installation">7. Verify Installation</a></li></ul></li><li><a href="#for-r-and-rstudio-environment">For R and RStudio environment</a><ul><li><a href="#edit-renviron-and-find-python-virtual-env-path">Edit ~/.Renviron and Find Python Virtual Env Path</a></li><li><a href="#rstudio-settings">RStudio Settings</a><ul><li><a href="#keras-and-tensorflow-library-installation"><strong>keras</strong> and <strong>tensorflow</strong> Library Installation</a></li><li><a href="#set-reticulate-environment">Set <strong>reticulate</strong> environment</a></li><li><a href="#set-global-options">Set Global Options</a></li></ul></li><li><a href="#verify-installation">Verify Installation</a></li></ul></li><li><a href="#references">References<a name="ref"></a></a><ul><li><a href="#python">Python</a></li><li><a href="#r">R</a></li></ul></li></ul>
+        </div>
+          </header>
+      <section>
+
+      <p><em>This documentation was compiled on May 25, 2023. Please refer to the <a href="#ref">reference link</a> if there is an update from the Apple Developer.</em></p>
+
+<p><strong>Contents:</strong></p>
+
+<ul id="markdown-toc">
+  <li><a href="#for-python-minicondaminiforge-environment" id="markdown-toc-for-python-minicondaminiforge-environment">For Python Miniconda/Miniforge Environment</a>    <ul>
+      <li><a href="#1-homebrew-installation" id="markdown-toc-1-homebrew-installation">1. Homebrew Installation</a></li>
+      <li><a href="#2-xcode-installation" id="markdown-toc-2-xcode-installation">2. Xcode Installation</a></li>
+      <li><a href="#3-miniforgeminiconda-installation" id="markdown-toc-3-miniforgeminiconda-installation">3. Miniforge/Miniconda Installation<a name="three"></a></a></li>
+      <li><a href="#4-create-virtual-environment" id="markdown-toc-4-create-virtual-environment">4. Create Virtual Environment</a></li>
+      <li><a href="#5-installing-tensorflow-macos-libraries" id="markdown-toc-5-installing-tensorflow-macos-libraries">5. Installing Tensorflow-MacOS libraries<a name="five"></a></a></li>
+      <li><a href="#6-jupyter-notebook-installation" id="markdown-toc-6-jupyter-notebook-installation">6. Jupyter Notebook Installation</a></li>
+      <li><a href="#7-verify-installation" id="markdown-toc-7-verify-installation">7. Verify Installation</a></li>
+    </ul>
+  </li>
+  <li><a href="#for-r-and-rstudio-environment" id="markdown-toc-for-r-and-rstudio-environment">For R and RStudio environment</a>    <ul>
+      <li><a href="#edit-renviron-and-find-python-virtual-env-path" id="markdown-toc-edit-renviron-and-find-python-virtual-env-path">Edit ~/.Renviron and Find Python Virtual Env Path</a></li>
+      <li><a href="#rstudio-settings" id="markdown-toc-rstudio-settings">RStudio Settings</a>        <ul>
+          <li><a href="#keras-and-tensorflow-library-installation" id="markdown-toc-keras-and-tensorflow-library-installation"><strong>keras</strong> and <strong>tensorflow</strong> Library Installation</a></li>
+          <li><a href="#set-reticulate-environment" id="markdown-toc-set-reticulate-environment">Set <strong>reticulate</strong> environment</a></li>
+          <li><a href="#set-global-options" id="markdown-toc-set-global-options">Set Global Options</a></li>
+        </ul>
+      </li>
+      <li><a href="#verify-installation" id="markdown-toc-verify-installation">Verify Installation</a></li>
+    </ul>
+  </li>
+  <li><a href="#references" id="markdown-toc-references">References<a name="ref"></a></a>    <ul>
+      <li><a href="#python" id="markdown-toc-python">Python</a></li>
+      <li><a href="#r" id="markdown-toc-r">R</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="for-python-minicondaminiforge-environment">For Python Miniconda/Miniforge Environment</h1>
+
+<h2 id="1-homebrew-installation">1. <a href="https://brew.sh/">Homebrew</a> Installation</h2>
+
+<p>Make sure install the Homebrew on your mac. Open your terminal (f4 + “Terminal”) and paste this command:</p>
+
+<div id="code-example-1" class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+</code></pre></div></div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
+
+<p>Homebrew simplifies the installation of software on Apple’s operating system, macOS, as well as Linux.</p>
+
+<blockquote>
+  <p>Official Documentation: <a href="https://brew.sh/">homebrew</a></p>
+</blockquote>
+
+<h2 id="2-xcode-installation">2. Xcode Installation</h2>
+
+<p>Check on your mac if Xcode Command Line already installed. If not, you can paste this command on Terminal:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xcode-select --install
+</code></pre></div></div>
+<p>Xcode Command Line Tools are an additional install which allows to compile applications from the command line (instead of using the Xcode application).</p>
+
+<h2 id="3-miniforgeminiconda-installation">3. Miniforge/Miniconda Installation<a name="three"></a></h2>
+
+<p>Install miniforge for arm64 (Apple Silicon). Miniforge enables installing python packages natively compiled for Apple Silicon.</p>
+
+<p>Note: If you already installed Anaconda Package Manager, uninstall it to avoid further errors. You can paste this code <strong>one-by-one</strong> on your Terminal:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda install anaconda-clean 
+
+anaconda-clean --yes
+
+sudo rm -rf /anaconda3
+</code></pre></div></div>
+
+<p>Try this one if command above is not succesfull:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo rm -rf anaconda3
+sudo rm -rf ~/anaconda3
+sudo rm -rf ~/opt/anaconda3
+</code></pre></div></div>
+<p>Further reference to <a href="https://docs.anaconda.com/free/anaconda/install/uninstall/#macos-or-linux">uninstall Anaconda on macOS</a></p>
+
+<p><a href="https://docs.conda.io/en/latest/miniconda.html">Install miniforge</a>. Download the <strong>Miniconda3 macOS Apple M1 64-bit pkg</strong>.</p>
+
+<p>Close your Terminal and open the new one. Make sure your miniconda installed correctly. By default, miniconda gives you <em>base</em> environment.</p>
+
+<p align="center" width="65%">
+    <img width="65%" src="assets/miniconda_terminal.png" />
+</p>
+
+<h2 id="4-create-virtual-environment">4. Create Virtual Environment</h2>
+
+<p>Create a virtual environment named <strong>tensorflow_m2</strong> or anything, really, with python3.8 or 3.9 or 3.10 installed.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda create --name &lt;YOUR_VIRTUAL_ENV_NAME&gt; python=&lt;PYTHON_VERSION&gt;
+</code></pre></div></div>
+
+<p>Example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda create --name tensorflow_m2 python=3.8
+</code></pre></div></div>
+
+<p align="center" width="65%">
+    <img width="65%" src="assets/virtual_env_terminal.png" />
+</p>
+
+<p>type <strong>y</strong> and enter.</p>
+
+<p>Activate your virtual environment with this command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda activate &lt;YOUR_VIRTUAL_ENV_NAME&gt;
+</code></pre></div></div>
+
+<p>example:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda activate tensorflow_m2
+</code></pre></div></div>
+
+<p align="center" width="65%">
+    <img width="65%" src="assets/activate_env_terminal.png" />
+</p>
+
+<h2 id="5-installing-tensorflow-macos-libraries">5. Installing Tensorflow-MacOS libraries<a name="five"></a></h2>
+
+<p>This is the crucial step especially with the library version. You have to specifically list the exact version or your tensorflow wont run correctly.</p>
+
+<p>Choose one set that does not output an error:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda install -c apple tensorflow-deps==2.10.0
+python -m pip install tensorflow-macos==2.10.0
+python -m pip install tensorflow-metal==0.6.0
+</code></pre></div></div>
+
+<p>or</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda install -c apple tensorflow-deps==2.9.0
+python -m pip install tensorflow-macos==2.9.0
+python -m pip install tensorflow-metal==0.5.0
+</code></pre></div></div>
+
+<p>After installation above, check the package/library version with this command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python --version
+conda list|grep -E '(tensorflow|numpy)'
+</code></pre></div></div>
+
+<p align="center" width="65%">
+    <img width="65%" src="assets/check_version_terminal.png" />
+</p>
+
+<p>Make sure there’s numpy library on your environment.</p>
+
+<h2 id="6-jupyter-notebook-installation">6. Jupyter Notebook Installation</h2>
+
+<p>Back to your conda base environment with this command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda deactivate
+</code></pre></div></div>
+
+<p align="center" width="65%">
+    <img width="65%" src="assets/deactivate_terminal.png" />
+</p>
+
+<p>Check if jupyter notebook already installed on your base env.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip list
+</code></pre></div></div>
+
+<p>or</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda list
+</code></pre></div></div>
+
+<p>output example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
+jupyter-client           7.3.4
+jupyter_core             5.3.0
+jupyter-events           0.6.3
+jupyter-server           1.23.6
+jupyter_server_terminals 0.4.4
+jupyterlab-pygments      0.2.2
+...
+</code></pre></div></div>
+
+<p>If jupyter notebook note installed yet, install it with this command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install notebook
+</code></pre></div></div>
+
+<p>Now that you already have jupyter notebook on base environment, activate the virtual environment that has the <strong>tensorflow</strong> library installed.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda activate tensorflow_m2
+</code></pre></div></div>
+
+<p>Install ipykernel and pandas on virtual environment:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install pandas ipykernel
+
+</code></pre></div></div>
+
+<p>Create new kernel with this command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python -m ipykernel install --user --name=&lt;YOUR_KERNEL_NAME&gt;
+</code></pre></div></div>
+
+<p>example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python -m ipykernel install --user --name=tensorflow_m2
+</code></pre></div></div>
+
+<p align="center" width="65%">
+    <img width="65%" src="assets/ipykernel_terminal.png" />
+</p>
+
+<p>Back to your <em>base</em> environment and type <strong>jupyter notebook</strong> on your terminal. It will open a localhost browser tab.</p>
+
+<p align="center" width="100%">
+    <img width="100%" src="assets/localhost_jupyter.png" />
+</p>
+
+<p>Create New Notebook with the new kernel.</p>
+
+<p>On upper right jupyter notebook localhost, click <strong>New</strong> button, select the kernel that has tensorflow installed on its environment. On your new notebook, import TensorFlow and paste this code:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Num GPUs Available: "</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tf</span><span class="p">.</span><span class="n">config</span><span class="p">.</span><span class="n">experimental</span><span class="p">.</span><span class="n">list_physical_devices</span><span class="p">(</span><span class="s">'GPU'</span><span class="p">)))</span>
+</code></pre></div></div>
+<p>Expected output:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Num GPUs Available:  1
+</code></pre></div></div>
+
+<h2 id="7-verify-installation">7. Verify Installation</h2>
+
+<p>From <a href="https://developer.apple.com/metal/tensorflow-plugin/">Official Documentation</a>, you can verify using this simple script:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+
+<span class="n">cifar</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">datasets</span><span class="p">.</span><span class="n">cifar100</span>
+<span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">),</span> <span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span> <span class="o">=</span> <span class="n">cifar</span><span class="p">.</span><span class="n">load_data</span><span class="p">()</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">applications</span><span class="p">.</span><span class="n">ResNet50</span><span class="p">(</span>
+    <span class="n">include_top</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+    <span class="n">weights</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+    <span class="n">classes</span><span class="o">=</span><span class="mi">100</span><span class="p">,)</span>
+
+<span class="n">loss_fn</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">losses</span><span class="p">.</span><span class="n">SparseCategoricalCrossentropy</span><span class="p">(</span><span class="n">from_logits</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">model</span><span class="p">.</span><span class="nb">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="s">"adam"</span><span class="p">,</span> <span class="n">loss</span><span class="o">=</span><span class="n">loss_fn</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s">"accuracy"</span><span class="p">])</span>
+<span class="n">model</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">64</span><span class="p">)</span>
+</code></pre></div></div>
+<p>Expected output:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Metal device set to: Apple M1
+
+
+2023-05-25 19:08:54.776001: I tensorflow/core/common_runtime/pluggable_device/pluggable_device_factory.cc:305] Could not identify NUMA node of platform GPU ID 0, defaulting to 0. Your kernel may not have been built with NUMA support.
+2023-05-25 19:08:54.776164: I tensorflow/core/common_runtime/pluggable_device/pluggable_device_factory.cc:271] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 0 MB memory) -&gt; physical PluggableDevice (device: 0, name: METAL, pci bus id: &lt;undefined&gt;)
+
+
+Epoch 1/5
+
+
+2023-05-25 19:08:55.767384: W tensorflow/core/platform/profile_utils/cpu_utils.cc:128] Failed to get CPU frequency: 0 Hz
+/opt/miniconda3/envs/tensorflow_m2/lib/python3.8/site-packages/tensorflow/python/util/dispatch.py:1082: UserWarning: "`sparse_categorical_crossentropy` received `from_logits=True`, but the `output` argument was produced by a sigmoid or softmax activation and thus does not represent logits. Was this intended?"
+  return dispatch_target(*args, **kwargs)
+2023-05-25 19:08:57.685235: I tensorflow/core/grappler/optimizers/custom_graph_optimizer_registry.cc:113] Plugin optimizer for device_type GPU is enabled.
+
+
+782/782 [==============================] - 127s 158ms/step - loss: 4.8612 - accuracy: 0.0606
+Epoch 2/5
+782/782 [==============================] - 122s 156ms/step - loss: 4.5699 - accuracy: 0.0862
+Epoch 3/5
+782/782 [==============================] - 122s 156ms/step - loss: 4.1519 - accuracy: 0.1116
+Epoch 4/5
+782/782 [==============================] - 122s 156ms/step - loss: 3.7930 - accuracy: 0.1513
+Epoch 5/5
+782/782 [==============================] - 123s 157ms/step - loss: 3.5854 - accuracy: 0.1827
+
+
+
+
+
+&lt;keras.callbacks.History at 0x2a4d557c0&gt;
+</code></pre></div></div>
+
+<p>If you can run above script successfully, congrats, you have finished the tensorflow installation!</p>
+
+<h1 id="for-r-and-rstudio-environment">For R and RStudio environment</h1>
+
+<p>Follow steps <a href="#three"><strong>three</strong></a> to step <a href="#five"><strong>five</strong></a> on the Python installation above. If you have done it, proceed with the steps below. Make sure the laptop has the <a href="http://lib.stat.cmu.edu/R/CRAN/">R programming languages</a> and <a href="https://posit.co/download/rstudio-desktop/">RStudio IDE</a> installed.</p>
+
+<h2 id="edit-renviron-and-find-python-virtual-env-path">Edit ~/.Renviron and Find Python Virtual Env Path</h2>
+
+<p>On your Terminal, activate your virtual environment. Paste this command to your Terminal.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo "RETICULATE_PYTHON=~/miniforge3/envs/&lt;YOUR_ENV_NAME&gt;/bin/python" &gt;&gt; ~/.Renviron
+</code></pre></div></div>
+
+<p>example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo "RETICULATE_PYTHON=~/miniforge3/envs/tensorflow_m2/bin/python" &gt;&gt; ~/.Renviron
+</code></pre></div></div>
+
+<p>Check your Python virtual environment path with this command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>which python
+</code></pre></div></div>
+
+<p align="center" width="65%">
+    <img width="65%" src="assets/which_python_terminal.png" />
+</p>
+
+<p>Copy the output path and save it somewhere. We’re going to use it in RStudio.</p>
+
+<h2 id="rstudio-settings">RStudio Settings</h2>
+
+<h3 id="keras-and-tensorflow-library-installation"><strong>keras</strong> and <strong>tensorflow</strong> Library Installation</h3>
+
+<p>Open RStudio, install <strong>keras</strong> dan <strong>tensorflow</strong> libraries. On lower left Panel, click <strong>Packages</strong> tab &gt; Install &gt; type the library name.</p>
+
+<p align="center" width="100%">
+    <img width="100%" src="assets/rstudio_install.png" />
+</p>
+
+<h3 id="set-reticulate-environment">Set <strong>reticulate</strong> environment</h3>
+
+<p>Open R-Studio and restart R-Session: Click menu <strong>Session</strong> &gt; <strong>Restart R</strong>. On Console panel, run this scripts <strong>one-by-one</strong>:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="n">Sys.setenv</span><span class="p">(</span><span class="n">RETICULATE_PYTHON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"&lt;PYTHON_ENV_PATH FROM_WHICH_PYTHON_COMMAND&gt;"</span><span class="p">)</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">reticulate</span><span class="o">::</span><span class="n">use_python</span><span class="p">(</span><span class="s2">"&lt;PYTHON_ENV_PATH FROM_WHICH_PYTHON_COMMAND&gt;"</span><span class="p">)</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">reticulate</span><span class="o">::</span><span class="n">use_condaenv</span><span class="p">(</span><span class="s2">"&lt;YOUR_ENV_NAME&gt;"</span><span class="p">,</span><span class="w"> </span><span class="n">required</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">library</span><span class="p">(</span><span class="n">tensorflow</span><span class="p">)</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tf_config</span><span class="p">()</span><span class="w"> 
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tf_version</span><span class="p">()</span><span class="w"> 
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tf</span><span class="o">$</span><span class="n">config</span><span class="o">$</span><span class="n">list_logical_devices</span><span class="p">()</span><span class="w">
+</span></code></pre></div></div>
+
+<p>example:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="n">Sys.setenv</span><span class="p">(</span><span class="n">RETICULATE_PYTHON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"/opt/miniconda3/envs/tensorflow_m2/bin/python"</span><span class="p">)</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">reticulate</span><span class="o">::</span><span class="n">use_python</span><span class="p">(</span><span class="s2">"/opt/miniconda3/envs/tensorflow_m2/bin/python"</span><span class="p">)</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">reticulate</span><span class="o">::</span><span class="n">use_condaenv</span><span class="p">(</span><span class="s2">"tensorflow_m2"</span><span class="p">,</span><span class="w"> </span><span class="n">required</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
+
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">library</span><span class="p">(</span><span class="n">tensorflow</span><span class="p">)</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tf_config</span><span class="p">()</span><span class="w"> 
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tf_version</span><span class="p">()</span><span class="w"> 
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tf</span><span class="o">$</span><span class="n">config</span><span class="o">$</span><span class="n">list_logical_devices</span><span class="p">()</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="set-global-options">Set Global Options</h3>
+
+<p>If there are no errors from all the line codes above, please go to menu <strong>Tools</strong> &gt; <strong>Global Options</strong> &gt; <strong>Python</strong>. In the Python Interpreter Section, remove the default path, and replace it with the Python path output from <code class="language-plaintext highlighter-rouge">tf_config()</code> above. For example, if the output looks like this:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="n">tf_config</span><span class="p">()</span><span class="w"> 
+</span><span class="n">TensorFlow</span><span class="w"> </span><span class="n">v2.9.0</span><span class="w"> </span><span class="p">(</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">miniconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">tensorflow_m2</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3.8</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">tensorflow</span><span class="p">)</span><span class="w">
+</span><span class="n">Python</span><span class="w"> </span><span class="n">v3.8</span><span class="w"> </span><span class="p">(</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">miniconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">tensorflow_m2</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">python3.8</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>it means that what you entered in <strong>Global Options</strong> is “/opt/miniconda3/envs/tensorflow_m1/bin/python3.8”. (minus the quotation marks).</p>
+
+<p align="center" width="100%">
+    <img width="100%" src="assets/rstudio_global_option.png" />
+</p>
+
+<h2 id="verify-installation">Verify Installation</h2>
+<p>If so, try to close Rstudio and open some R project that uses TensorFlow. Run All and make sure all the code can work. Or you can verify your installation with this code:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span><span class="w"> </span><span class="n">library</span><span class="p">(</span><span class="n">keras</span><span class="p">)</span><span class="w">
+</span><span class="o">&gt;</span><span class="w"> </span><span class="n">model</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">keras_model_sequential</span><span class="p">()</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The <em>model</em> variable should be appear on your global environment and if there is no error, then it is ready to use.</p>
+
+<h1 id="references">References<a name="ref"></a></h1>
+
+<h2 id="python">Python</h2>
+
+<ul>
+  <li><a href="https://docs.conda.io/en/latest/miniconda.html">Miniconda Official Documentation</a></li>
+  <li><a href="https://caffeinedev.medium.com/how-to-install-tensorflow-on-m1-mac-8e9b91d93706">Prabhat Kumar Sahu’s Medium blog</a></li>
+  <li><a href="https://github.com/conda-forge/miniforge">Miniforge github</a></li>
+  <li><a href="https://developer.apple.com/metal/tensorflow-plugin/">Apple Developer Official Documentation</a></li>
+  <li><a href="https://developer.apple.com/forums/thread/702851">Apple Developer Forum Thread</a></li>
+  <li><a href="https://stackoverflow.com/questions/72964800/what-is-the-proper-way-to-install-tensorflow-on-apple-m1-in-2022">Stackoverflow: What is the proper way to install TensorFlow on Apple M1 in 2022</a></li>
+</ul>
+
+<h2 id="r">R</h2>
+
+<ul>
+  <li><a href="https://stackoverflow.com/questions/71355902/how-to-install-keras-using-r-studio-on-a-mac-os-computer">Stackoverflow: How to install keras using R Studio on a Mac OS computer?</a></li>
+  <li><a href="https://github.com/teamalgoritma/community/discussions/622">Github Discussion: Error install tensorflow di R dengan chipset m1/m2</a></li>
+  <li><a href="https://stackoverflow.com/questions/74953200/r-rstudio-cant-find-valid-tensorflow-installation-mac-m1">Stackoverflow: R (RStudio) can’t find valid tensorflow installation (Mac M1)</a></li>
+</ul>
+
+<script>
+<!-- clipboard.js code -->
+// get all <code> elements
+var allCodeBlocksElements = $( "code" );
+
+allCodeBlocksElements.each(function(i) {
+ 	// add different id for each code block
+
+	// target	
+  var currentId = "codeblock" + (i + 1);
+  $(this).attr('id', currentId);
+     
+  //trigger
+  var clipButton = '<button class="btn" data-clipboard-target="#' + currentId + '"><img src="https://clipboardjs.com/assets/images/clippy.svg" width="13" alt="Copy to clipboard"></button>';
+     $(this).after(clipButton);
+  });
+ 
+  new Clipboard('.btn');
+</script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
+
+
+        
+      </section>
+      <footer>
+        
+<!--         <p>This project is maintained by <a href="https://github.com/hwulanayu">hwulanayu</a></p> -->
+        
+      </footer>
+    </div>
+    <script src="/tensorflow_apple_chip/assets/js/scale.fix.js"></script>
+  </body>
+</html>
