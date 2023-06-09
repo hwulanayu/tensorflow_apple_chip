@@ -15,6 +15,7 @@
   <body>
     <div class="wrapper">
       <header>
+        <div class="sidebar">
         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
 
         {% if site.logo %}
@@ -41,6 +42,7 @@
         
         <p><b>Contents:</b></p> 
         {% include toc.html html=content %}
+        </div>
       </header>
       <section>
 
