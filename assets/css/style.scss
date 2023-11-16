@@ -13,6 +13,18 @@
   scrollbar-gutter:var(--gutter,auto);
 }
 
+header {
+    width: 270px;
+    float: left;
+    position: fixed;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+section {
+    width: 500px;
+    float: right;
+    padding-bottom: 50px;
+}
 // section {
 //   width:900px;
 //   float:right;
