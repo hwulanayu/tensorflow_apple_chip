@@ -3,15 +3,15 @@
 
 @import "{{ site.theme }}";
 
-// .wrapper {
-//   width:1200px;
-//   // left side is 270
-//   // 1200-270 = 930
-//   // 30px free room
-//   margin:0 auto;
-//   overflow-y: scroll; /* Enable vertical scrolling */
-//   scrollbar-gutter:var(--gutter,auto);
-// }
+.wrapper {
+  width:860px;
+  // left side is 270
+  // 1200-270 = 930
+  // 30px free room
+  margin:0 auto;
+  overflow-y: scroll; /* Enable vertical scrolling */
+  scrollbar-gutter:var(--gutter,auto);
+}
 
 // section {
 //   width:900px;
