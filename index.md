@@ -106,17 +106,17 @@ This is the crucial step especially with the library version. You have to specif
 Choose one set that does not output an error:
 
 ```
-conda install -c apple tensorflow-deps==2.10.0
-python -m pip install tensorflow-macos==2.10.0
-python -m pip install tensorflow-metal==0.6.0
+conda install -c apple tensorflow-deps==2.9.0
+python -m pip install tensorflow-macos==2.9.0
+python -m pip install tensorflow-metal==0.5.0
 ```
 
 or
 
 ```
-conda install -c apple tensorflow-deps==2.9.0
-python -m pip install tensorflow-macos==2.9.0
-python -m pip install tensorflow-metal==0.5.0
+conda install -c apple tensorflow-deps==2.10.0
+python -m pip install tensorflow-macos==2.10.0
+python -m pip install tensorflow-metal==0.6.0
 ```
 
 After installation above, check the package/library version with this command:
@@ -367,6 +367,25 @@ it means that what you entered in **Global Options** is "/opt/miniconda3/envs/te
     <img width="100%" src="assets/rstudio_global_option.png">
 </p>
 
+However, if you got an error like this:
+
+```r
+> tf_config() 
+....mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e')....
+```
+
+You probably got the wrong R version for your M1/M2 chip. Make sure you had the arm64 installation of R. To check it, you can open the Console tab on RStudio (panel kiri bawah). Type `Sys.info()`. Look for **machine** information related to the architecture. Example:
+
+```r
+> Sys.info()["machine"]
+```
+Expected output:
+```r
+> Sys.info()["machine"]
+machine 
+"arm64"
+```
+If the output is "arm64" or "aarch64", then your R installation runs in arm64 mode. If the output is "x86_64", then R is running in 64-bit mode on an Intel-based architecture, and you must change it. Install your R right here [https://posit.co/download/rstudio-desktop/](https://cran.rstudio.com/). Choose the latest release for Apple silicon (M1/M2) Macs. After reinstallation, try again from # For R and RStudio environment
 
 ## Verify Installation
 If so, try to close Rstudio and open some R project that uses TensorFlow. Run All and make sure all the code can work. Or you can verify your installation with this code:
