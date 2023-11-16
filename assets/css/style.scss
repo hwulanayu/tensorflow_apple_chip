@@ -4,24 +4,25 @@
 @import "{{ site.theme }}";
 
 .wrapper {
-  width:860px;
+  width:1200px;
   // left side is 270
   // 1200-270 = 930
   // 30px free room
   margin:0 auto;
-  overflow-y: scroll; /* Enable vertical scrolling */
-  scrollbar-gutter:var(--gutter,auto);
+  // overflow-y: scroll; /* Enable vertical scrolling */
+  // scrollbar-gutter:var(--gutter,auto);
 }
 
 header {
     width: 270px;
     float: left;
     position: fixed;
+    overflow-y: scroll;
     -webkit-font-smoothing: subpixel-antialiased;
 }
 
 section {
-    width: 500px;
+    width: 930px;
     float: right;
     padding-bottom: 50px;
 }
