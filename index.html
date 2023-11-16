@@ -128,9 +128,7 @@
 <p>Note: If you already installed Anaconda Package Manager, uninstall it to avoid further errors. You can paste this code <strong>one-by-one</strong> on your Terminal:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda install anaconda-clean 
-
 anaconda-clean --yes
-
 sudo rm -rf /anaconda3
 </code></pre></div></div>
 
@@ -187,16 +185,16 @@ sudo rm -rf ~/opt/anaconda3
 
 <p>Choose one set that does not output an error:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda install -c apple tensorflow-deps==2.10.0
-python -m pip install tensorflow-macos==2.10.0
-python -m pip install tensorflow-metal==0.6.0
-</code></pre></div></div>
-
-<p>or</p>
-
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda install -c apple tensorflow-deps==2.9.0
 python -m pip install tensorflow-macos==2.9.0
 python -m pip install tensorflow-metal==0.5.0
+</code></pre></div></div>
+
+<p>or</p>
+        
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda install -c apple tensorflow-deps==2.10.0
+python -m pip install tensorflow-macos==2.10.0
+python -m pip install tensorflow-metal==0.6.0
 </code></pre></div></div>
 
 <p>After installation above, check the package/library version with this command:</p>
@@ -425,6 +423,32 @@ Epoch 5/5
     <img width="100%" src="assets/rstudio_global_option.png" />
 </p>
 
+<p>However, if you got an error like this:</p>
+<pre class="r"><code id="codeblock32" class="hljs">&gt; tf_config() 
+....mach-o file, but is an incompatible architecture (have <span class="hljs-string">'x86_64'</span>, need <span class="hljs-string">'arm64e'</span>)....</code><button class="btn" data-clipboard-target="#codeblock32"><img src="https://clipboardjs.com/assets/images/clippy.svg" width="13" alt="Copy to clipboard"></button></pre>
+        
+<p>You probably got the wrong R version for your M1/M2 chip. Make sure
+you had the arm64 installation of R. To check it, you can open the
+Console tab on RStudio (panel kiri bawah). Type <code id="codeblock33">Sys.info()</code><button class="btn" data-clipboard-target="#codeblock33"><img src="https://clipboardjs.com/assets/images/clippy.svg" width="13" alt="Copy to clipboard"></button>.
+Look for <strong>machine</strong> information related to the
+architecture. Example:</p>
+        
+<pre class="r"><code id="codeblock34" class="hljs">&gt; Sys.info()[<span class="hljs-string">"machine"</span>]</code><button class="btn" data-clipboard-target="#codeblock34"><img src="https://clipboardjs.com/assets/images/clippy.svg" width="13" alt="Copy to clipboard"></button></pre>
+        
+<p>Expected output:</p>
+<pre class="r"><code id="codeblock35" class="hljs">&gt; Sys.info()[<span class="hljs-string">"machine"</span>]
+machine 
+<span class="hljs-string">"arm64"</span></code><button class="btn" data-clipboard-target="#codeblock35"><img src="https://clipboardjs.com/assets/images/clippy.svg" width="13" alt="Copy to clipboard"></button></pre>
+        
+<p>If the output is “arm64” or “aarch64”, then your R installation runs
+in arm64 mode. If the output is “x86_64”, then R is running in 64-bit
+mode on an Intel-based architecture, and you must change it. Install
+your R right here <a href="https://cran.rstudio.com/">https://posit.co/download/rstudio-desktop/</a>.
+Choose the latest release for Apple silicon (M1/M2) Macs. After
+reinstallation, try again from # For R and RStudio environment</p>
+        
+
+        
 <h2 id="verify-installation">Verify Installation</h2>
 <p>If so, try to close Rstudio and open some R project that uses TensorFlow. Run All and make sure all the code can work. Or you can verify your installation with this code:</p>
 
