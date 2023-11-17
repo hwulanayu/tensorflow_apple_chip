@@ -119,6 +119,12 @@ python -m pip install tensorflow-macos==2.10.0
 python -m pip install tensorflow-metal==0.6.0
 ```
 
+If you got an error in this step, make sure you have the latest versions of pip and setuptools:
+
+```
+pip install --upgrade pip setuptools
+```
+
 After installation above, check the package/library version with this command:
 
 ```
